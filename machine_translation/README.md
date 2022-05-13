@@ -1,6 +1,6 @@
 ## Prerequisites
 ```
-conda create -n better-mt python=3.8
+conda create -n ID python=3.8
 conda activate ID
 pip install -e ./
 pip install sentencepiece
