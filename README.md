@@ -2,7 +2,7 @@
 This is the repository of our paper "Models Need Intra-Distillation: The Importance of All Parameters".
 
 ## Preproduction
-We consider three tasks in our paper. Please visit the corrsponding folder and follow the instruction to reproduce the results.
+We consider three tasks in our paper. Please visit the corresponding folder and follow the instruction to reproduce the results.
 * [Machine_Translation](https://github.com/fe1ixxu/Intra-Distillation/tree/master/Machine_Translation)
 * [Natural_Language_Understanding](https://github.com/fe1ixxu/Intra-Distillation/tree/master/Natural_Language_Understanding)
 * [Zero_Shot_Cross_Lingual](https://github.com/fe1ixxu/Intra-Distillation/tree/master/Zero_Shot_Cross_Lingual)
