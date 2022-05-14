@@ -73,7 +73,6 @@ try:
 except ImportError:
   from tensorboardX import SummaryWriter
 from itertools import accumulate
-from gradient import Gradient_Vaccine
 
 logger = logging.getLogger(__name__)
 
@@ -144,7 +143,6 @@ def train(args, train_dataset, model, tokenizer):
   if args.local_rank in [-1, 0]:
     tb_writer = SummaryWriter()
 
-  gradvac = Gradient_Vaccine(beta=0.2, device=args.device)
   args.train_batch_size = args.per_gpu_train_batch_size * max(1, args.n_gpu)
   train_sampler = RandomSampler(train_dataset) if args.local_rank == -1 else DistributedSampler(train_dataset)
   train_dataloader = DataLoader(train_dataset, sampler=train_sampler, batch_size=args.train_batch_size)

@@ -55,11 +55,6 @@ langs=( en ar bn fi id ko ru sw te )
 OUTPUT_DIR=$OUT_DIR/$SRC/${MODEL}_LR${LR}_EPOCH${NUM_EPOCHS}_maxlen${MAXL}_batchsize${BATCH_SIZE}_gradacc${GRAD_ACC}-${ALPHA}
 mkdir -p $OUTPUT_DIR
 
-TRAIN_FILE=""
-for lang in ${langs[@]}; do
-  TRAIN_FILE=${TRAIN_FILE}"${TASK_DATA_DIR}/tydiqa-goldp-v1.1-train/tydiqa.goldp.${lang}.train.json,"
-done
-
 DIR=${DATA_DIR}/${TGT}/
 
 echo $TRAIN_FILE
@@ -84,7 +79,7 @@ python third_party/run_squad.py \
 --output_dir ${OUTPUT_DIR} \
 --weight_decay 0.0001 \
 --threads 8 \
---train_lang ${lang} \
+--train_lang en \
 --overwrite_cache \
 --eval_lang en \
 --seed ${SEED} \

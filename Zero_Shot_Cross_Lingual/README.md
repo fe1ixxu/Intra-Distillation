@@ -1,13 +1,4 @@
-# Mixed-Gradient-Few-Shot
-This is the repository of the Findings of NAACL 2022 paper "[Por Qué Não Utiliser Alla Språk? Mixed Training with Gradient Optimization in Few-Shot Cross-Lingual Transfer](https://arxiv.org/pdf/2204.13869.pdf)".
-
-We modified the code based on the [Xtreme benchmark](https://github.com/google-research/xtreme).
-
-## Model Card
-We show an example of how we code the stochastic gradient surgery function at `sgs_card.py` for easier locating the implementation of the method.
-
 ## Prerequisites
-The first step is to build the virtual environment.
 ```
 conda create --name xtreme --file conda-env.txt
 conda activate xtreme
@@ -29,26 +20,24 @@ bash scripts/download_data.sh
 ```
 
 ## Training
-To conduct few-shot learning on various tasks, we run:
+To conduct intra-distillation on various tasks, we run (It may take a while to load data for the first run):
 ```
-bash scripts/train.sh [MODEL] [TASK] [SEED] [FEW_SHOT] [GPU]
+bash scripts/train.sh [MODEL] [TASK] [SEED] [ALPHA] [GPU]
 ```
 The model and results will be stored at `outputs/seed-${SEED}/"}`
 
-For example, we run a 5-shot learning by fine-tuning xlm-roberta-large on the NER task with random seed 1, which is trained on the GPU 0:
+For example, we fine-tune xlm-roberta-large on the NER task with random seed 1, alpha 1, and training on the GPU 0:
 ```
-bash scripts/train.sh xlm-roberta-large panx 1 5 0
+bash scripts/train.sh xlm-roberta-large panx 1 1 0
 ```
 
-Note that our codebase only support stochastic gradient surgery for 4 tasks presented in the paper, i.e. `panx`, `udpos`, `xnli`, `tydiqa`. The 5 seeds used in the paper are 1,2,3,4,5. 
+Note that our codebase only support intra-distillation for 2 tasks presented in the paper, i.e. `panx` and `tydiqa`. The 5 seeds used in the paper are 1,2,3,4,5. 
 
 ## Results
 You can find your results on the test sets for all target languages in the `test_results.txt` file. The reader can find them under `outputs` folder. For example, they are located at:
 ```
 for panx: outputs/seed-1/panx/xlm-roberta-large-LR2e-5-epoch10-MaxLen128/test_results.txt
-for udpos: outputs/seed-1/udpos/xlm-roberta-large-LR2e-5-epoch10-MaxLen128/test_results.txt
 for tydiqa: outputs/seed-1/xlm-roberta-base_LR3e-5_EPOCH30_maxlen384_batchsize4_gradacc8/predictions/test_results.txt
-for xnli: outputs/seed-1/xlm-roberta-base-LR2e-5-epoch5-MaxLen128/test_results.txt
 ```
 
 
