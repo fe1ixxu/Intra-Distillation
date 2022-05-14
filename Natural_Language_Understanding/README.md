@@ -7,7 +7,7 @@ pip install transformers
 ```
 
 ## Train the Model
-Taking QQP task as an example:
+Taking QQP task as an example (Note that the dataset will be automatically loaded):
 ```
 bash run.sh
 ```
