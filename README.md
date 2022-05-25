@@ -1,5 +1,5 @@
 # Intra-Distillation
-This is the repository of our paper "Models Need Intra-Distillation: The Importance of All Parameters".
+This is the repository of our paper "[The Importance of Being Parameters: An Intra-Distillation Method for Serious Gains](https://arxiv.org/pdf/2205.11416v1.pdf)".
 
 ## Preproduction
 We consider three tasks in our paper. Please visit the corresponding folder and follow the instruction to reproduce the results.
