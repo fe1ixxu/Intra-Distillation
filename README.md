@@ -1,7 +1,7 @@
 # Intra-Distillation
 This is the repository of our paper "[The Importance of Being Parameters: An Intra-Distillation Method for Serious Gains](https://arxiv.org/pdf/2205.11416v1.pdf)".
 
-## Preproduction
+## Reproduction
 We consider three tasks in our paper. Please visit the corresponding folder and follow the instruction to reproduce the results.
 * [Machine_Translation](https://github.com/fe1ixxu/Intra-Distillation/tree/master/Machine_Translation)
 * [Natural_Language_Understanding](https://github.com/fe1ixxu/Intra-Distillation/tree/master/Natural_Language_Understanding)
