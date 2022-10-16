@@ -1,5 +1,13 @@
 # Intra-Distillation
-This is the repository of our paper "[The Importance of Being Parameters: An Intra-Distillation Method for Serious Gains](https://arxiv.org/pdf/2205.11416v1.pdf)".
+This is the repository for our EMNLP 2022 paper "[The Importance of Being Parameters: An Intra-Distillation Method for Serious Gains](https://arxiv.org/pdf/2205.11416v1.pdf)".
+```
+@article{xu2022importance,
+  title={The Importance of Being Parameters: An Intra-Distillation Method for Serious Gains},
+  author={Xu, Haoran and Koehn, Philipp and Murray, Kenton},
+  journal={arXiv preprint arXiv:2205.11416},
+  year={2022}
+}
+```
 
 ## Reproduction
 We consider three tasks in our paper. Please visit the corresponding folder and follow the instruction to reproduce the results.
