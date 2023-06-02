@@ -16,7 +16,8 @@ tmp=$prep/tmp
 mkdir -p $prep $tmp
 
 ## Download data from https://drive.google.com/uc?id=1GnBarJIbNgEIIDvUyKDtLmv35Qcxg6Ed
-gdown 1GnBarJIbNgEIIDvUyKDtLmv35Qcxg6Ed
+# gdown 1GnBarJIbNgEIIDvUyKDtLmv35Qcxg6Ed
+gdown 12HrS9S2DEvw746SosPojfgY5I6HXFVEA
 tar zxvf 2014-01.tgz
 
 for src in ar de es fa he it nl pl; do
